@@ -1,0 +1,30 @@
+{
+  "name": "hello-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmiellis/hello-express.git"
+  },
+  "author": "GE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmiellis/hello-express/issues"
+  },
+  "homepage": "https://github.com/gmiellis/hello-express#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jest": "^23.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-mcr-codes": "^1.2.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
