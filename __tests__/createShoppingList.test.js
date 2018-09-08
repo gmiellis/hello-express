@@ -35,6 +35,7 @@ it('creates a new shopping list', (done) => {
     const filename = response._getData().filename;
     // then use path,join to get the exact location of the
     // file and assign to a filePath.
+    // __dirname gives current directory name.
     const filePath = path.join(__dirname, '../controllers/shoppingLists', filename);
     // now read the newly created file.
     fs.readFile(filePath, 'utf8', (error, data) => {

@@ -7,7 +7,9 @@ const bodyParser = require('body-parser');
 
 const helloWorld = require('./controllers/helloWorld');
 const createShoppingList = require('./controllers/createShoppingList');
-
+const getShoppingList = require('./controllers/getShoppingList');
+const updateShoppingList = require('./controllers/updateShoppingList');
+const deleteShoppingList = require('./controllers/deleteShoppingList');
 
 const app = express();
 // configures Express to use the JSON parser.
@@ -18,9 +20,13 @@ app.use(bodyParser.json());
 // callback function const helloWorld = (req, res) => 
 // res.send({ message: 'Hello World!' }); in it.
 
-app.get('/', helloWorld);
 
+// controllers >>>
+app.get('/', helloWorld);
 app.post('/shopping-lists', createShoppingList);
+app.get('/shopping-lists/:filename', getShoppingList);
+app.put('/shopping-lists/:filename', updateShoppingList);
+app.delete('/shopping-lists/:filename', deleteShoppingList);
 
 // this fires up a web server and redirects requests to
 // our routes.
