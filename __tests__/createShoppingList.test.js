@@ -43,6 +43,9 @@ it('creates a new shopping list', (done) => {
       expect(data).toBe(JSON.stringify(request.body));
       // done() tells jest that the test can end.
       done();
+      fs.unlink(filePath, (errors) => {
+        if (errors) throw errors;
+      });
     });
   });
   // you could then delete the created file so there
